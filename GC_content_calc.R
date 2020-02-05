@@ -16,6 +16,9 @@ df2 <- df %>%
 split_characters <- unlist(strsplit(df2$V1, split = ""))
 head(split_characters, 50)
 
+# bp to Mbp
+dim(as.data.frame(split_characters))[1]/1000000
+
 # calculate nucleotide frequencies
 char_frequencies <- as.data.frame(table(split_characters))
 
